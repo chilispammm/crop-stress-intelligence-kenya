@@ -106,22 +106,6 @@ crop-stress-intelligence-kenya/
 
 ---
 
-## 8. Reproducibility & Testing
-
-### Environment Setup
-```bash
-# Clone repository and create Python 3.11 virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .\.venv\Scripts\Activate.ps1
-
-# Install editable package with development dependencies
-pip install -e .[dev]
-```
-
-### Run Test Suite
-```bash
-pytest -m "not network"
-```
 
 ### Run Full Production Pipeline
 ```bash
