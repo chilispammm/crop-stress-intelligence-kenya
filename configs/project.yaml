@@ -1,0 +1,62 @@
+project:
+  name: "crop-stress-intelligence-kenya"
+  version: "0.4.0"
+
+study:
+  country: "Kenya"
+  region: "Uasin Gishu"
+  crop: "maize"
+
+spatial:
+  optical_crs: "EPSG:32736"
+  county_boundary_geojson: "configs/aoi/uasin_gishu_county.geojson"
+  pilot_aoi_geojson: "configs/aoi/pilot_aoi.geojson"
+  county_bbox: [34.880, 0.170, 35.580, 0.940]
+  pilot_aoi:
+    name: "Moiben-Soy Agricultural Pilot Zone"
+    aoi_id: "ug_pilot_moiben_01"
+    bbox: [35.150, 0.550, 35.350, 0.750]  # [min_lon, min_lat, max_lon, max_lat] in EPSG:4326
+
+sources:
+  sentinel2:
+    provider: "Digital Earth Africa"
+    stac_api_url: "https://explorer.digitalearth.africa/stac"
+    collection_id: "s2_l2a"
+    scale_factor: 0.0001
+    native_optical_crs: "EPSG:32736"
+  chirps:
+    provider: "Climate Hazards Center / UC Santa Barbara"
+    native_resolution_deg: 0.05
+    native_crs: "EPSG:4326"
+  grafs:
+    provider: "ANU Centre for Water and Landscape Dynamics / NCI Australia"
+    nci_opendap_base_url: "https://thredds.nci.org.au/thredds/dodsC/ub8/global/GRAFS"
+    native_resolution_deg: 0.1
+    native_crs: "EPSG:4326"
+  smap:
+    provider: "NASA Earth Science / GMAO / NSIDC DAAC"
+    product_id: "SPL4SMGP"
+    version: "008"
+    cmr_api_url: "https://cmr.earthdata.nasa.gov/search/granules.json"
+    native_resolution_km: 9.0
+    native_crs: "EPSG:6933"
+    storage_crs: "EPSG:6933"
+    doi: "https://doi.org/10.5067/T5RUATAQREF8"
+    variables:
+      surface_wetness: "sm_surface_wetness"
+      rootzone_wetness: "sm_rootzone_wetness"
+  crop_mask:
+    provider: "Digital Earth Africa"
+    collection_id: "crop_mask_eastern"
+    product_name: "Cropland Extent Eastern Africa (20 m)"
+    native_resolution_m: 20
+    native_crs: "EPSG:32736"
+    storage_crs: "EPSG:6933"
+    working_crs: "EPSG:32736"
+
+climatology:
+  baseline_years: [1991, 2020]
+  expected_baseline_months: 360
+  min_valid_observations: 20
+  std_epsilon: 0.0001
+  resampling_method: "average"

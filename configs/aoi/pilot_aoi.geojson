@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "name": "uasin_gishu_moiben_pilot_aoi",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "ug_pilot_moiben_01",
+        "name": "Moiben-Soy Agricultural Pilot Zone",
+        "county": "Uasin Gishu",
+        "country": "Kenya",
+        "bbox_wgs84": [35.150, 0.550, 35.350, 0.750],
+        "area_km2": 490.5,
+        "dominant_crop": "maize",
+        "optical_crs": "EPSG:32736",
+        "description": "Representative high-density commercial and smallholder maize cluster in north-central Uasin Gishu County."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [35.150, 0.550],
+            [35.350, 0.550],
+            [35.350, 0.750],
+            [35.150, 0.750],
+            [35.150, 0.550]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "title": "Crop Stress Intelligence Kenya — Seasonal Diagnostic Summary",
+    "report_version": "1.0.0",
+    "generated_utc": "2026-08-26T18:38:17.384514+00:00",
+    "software_version": "0.4.0"
+  },
+  "spatial_scope": {
+    "aoi_id": "ug_pilot_moiben_01",
+    "aoi_name": "Moiben-Soy Agricultural Pilot Zone",
+    "bbox_wgs84": [
+      35.15,
+      0.55,
+      35.35,
+      0.75
+    ],
+    "crs_optical": "EPSG:32736",
+    "crs_diagnostic": "EPSG:6933",
+    "mmu_threshold_ha": 2.0
+  },
+  "temporal_scope": {
+    "season_name": "2023 Long Rains",
+    "season_start": "2023-03-01",
+    "season_end": "2023-09-27",
+    "n_canonical_bins": 15,
+    "bin_interval_days": 14
+  },
+  "diagnostic_totals": {
+    "total_extracted_clusters": 28,
+    "total_candidate_area_ha_cumulative": 3202.47,
+    "actionable_bin_count": 7,
+    "first_actionable_date": "2023-03-01",
+    "last_actionable_date": "2023-09-13",
+    "max_single_bin_area_ha": 503.1,
+    "max_area_bin_index": 10
+  },
+  "pixel_classification_totals": {
+    "normal": 43926,
+    "case_a_drought_stress": 0,
+    "case_b_vegetation_anomaly_non_dry": 6384,
+    "case_c_drought_meteorological": 0,
+    "case_d_hydrological_disconnect": 27137,
+    "multi_signal_overlap": 6403,
+    "insufficient_evidence": 0
+  },
+  "actionable_bins_detail": [
+    {
+      "bin_index": 1,
+      "bin_start": "2023-03-01",
+      "cluster_count": 22,
+      "area_ha": 183.87,
+      "dominant_case": "CASE_B"
+    },
+    {
+      "bin_index": 10,
+      "bin_start": "2023-07-05",
+      "cluster_count": 1,
+      "area_ha": 503.1,
+      "dominant_case": "CASE_D"
+    },
+    {
+      "bin_index": 11,
+      "bin_start": "2023-07-19",
+      "cluster_count": 1,
+      "area_ha": 503.1,
+      "dominant_case": "CASE_D"
+    },
+    {
+      "bin_index": 12,
+      "bin_start": "2023-08-02",
+      "cluster_count": 1,
+      "area_ha": 503.1,
+      "dominant_case": "CASE_D"
+    },
+    {
+      "bin_index": 13,
+      "bin_start": "2023-08-16",
+      "cluster_count": 1,
+      "area_ha": 503.1,
+      "dominant_case": "CASE_D"
+    },
+    {
+      "bin_index": 14,
+      "bin_start": "2023-08-30",
+      "cluster_count": 1,
+      "area_ha": 503.1,
+      "dominant_case": "CASE_D"
+    },
+    {
+      "bin_index": 15,
+      "bin_start": "2023-09-13",
+      "cluster_count": 1,
+      "area_ha": 503.1,
+      "dominant_case": "MULTI_SIGNAL"
+    }
+  ],
+  "provenance_and_sources": {
+    "soil_moisture_source": "NASA SMAP Level-4 (SPL4SMGP V008)",
+    "optical_vegetation_source": "Digital Earth Africa Sentinel-2 L2A",
+    "rainfall_climatology_source": "CHIRPS Monthly Climatology (1991-2020 Baseline)",
+    "diagnostic_matrix_version": "M5.0 Frozen Matrix (ADR-021)"
+  },
+  "scientific_caveats": [
+    "Candidate scouting zones represent priority screening hypotheses to guide field verification, NOT confirmed yield loss or crop damage.",
+    "Case B reflects vegetation anomalies under non-dry conditions; it does NOT prove insect pests, fungal pathogens, or specific disease presence.",
+    "Case D reflects above-average rainfall coincident with non-increasing root-zone wetness; it does NOT prove soil crusting, runoff failure, or infiltration impedance.",
+    "Spatial Scale Disparity Limitation: CHIRPS (5.5 km) and SMAP (9 km) data provide coarse regional forcing broadcast to the 30 m grid via nearest neighbor. Over the 503.10 ha focal block, regional hydro-meteorological conditions are spatially uniform.",
+    "Evaluated Spatial Extent: The 503.10 ha (86x65, 30 m) grid represents the intentional frozen focal pilot evaluation block within the broader 490.5 km² regional pilot AOI.",
+    "SWI >= 0.30 and Z_R >= 0.50 are operational screening priors, not empirically calibrated in-situ agronomic adequacy thresholds."
+  ]
+}

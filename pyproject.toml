@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crop-stress-intelligence-kenya"
+version = "0.2.0"
+description = "Multi-Modal Crop Stress Intelligence System for Kenya (Uasin Gishu County)"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+authors = [
+    { name = "Crop Stress Intelligence Team" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy",
+    "pandas",
+    "xarray",
+    "dask",
+    "geopandas",
+    "shapely",
+    "rasterio",
+    "rioxarray",
+    "pystac-client",
+    "odc-stac",
+    "scipy",
+    "matplotlib",
+    "pyyaml",
+    "netcdf4",
+    "h5netcdf",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --strict-markers"
+markers = [
+    "network: marks tests requiring external remote network data access",
+    "integration: marks integration tests",
+]

@@ -1,0 +1,78 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              35.23946607909996,
+              0.6397628480193037
+            ],
+            [
+              35.23946607909996,
+              0.6599877835295378
+            ],
+            [
+              35.259676206331825,
+              0.6599877835295378
+            ],
+            [
+              35.259676206331825,
+              0.6397628480193037
+            ],
+            [
+              35.23946607909996,
+              0.6397628480193037
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "zone_id": "SC-20230802-0001",
+        "case_type": "CASE_D",
+        "area_ha": 503.1,
+        "geom_area_ha": 503.1,
+        "area_ha_match": true,
+        "pixel_count": 5590,
+        "pixel_area_m2": 900.0,
+        "mean_z_ndvi": 0.2356,
+        "mean_z_r": 1.026,
+        "mean_delta_swi_14d": -0.0281,
+        "mean_confidence": 1.0,
+        "centroid_lat": 0.649875,
+        "centroid_lon": 35.249571
+      }
+    }
+  ],
+  "pipeline_report": {
+    "pixel_area_m2": 900.0,
+    "pixel_area_source": "affine_transform",
+    "raw_actionable_pixels": 5590,
+    "raw_actionable_area_m2": 5031000.0,
+    "raw_actionable_area_ha": 503.1,
+    "post_morphology_pixels": 5590,
+    "post_morphology_area_m2": 5031000.0,
+    "post_morphology_area_ha": 503.1,
+    "n_connected_components": 1,
+    "n_components_removed_mmu": 0,
+    "n_surviving_clusters": 1,
+    "final_total_area_m2": 5031000.0,
+    "final_total_area_ha": 503.1,
+    "mmu_threshold_m2": 20000.0,
+    "morphology_applied": true,
+    "connectivity": "8-connected",
+    "area_calculation_crs": "EPSG:6933",
+    "area_calculation_method": "pixel_count \u00d7 pixel_area_m2 (projected)"
+  },
+  "properties": {
+    "grid_bbox": [
+      35.239622,
+      0.63988,
+      35.259832,
+      0.660105
+    ]
+  }
+}

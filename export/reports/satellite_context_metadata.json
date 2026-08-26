@@ -1,0 +1,111 @@
+{
+  "metadata_version": "1.0.0",
+  "generated_at": "2026-08-26T14:32:06.195727+00:00",
+  "provenance_standard": "ADR-029 Satellite Context & Visual Grounding Specification",
+  "products": [
+    {
+      "filename": "satellite_context_regional_2023.png",
+      "title": "Regional Satellite Context \u2014 Moiben-Soy Agricultural Zone",
+      "sensor": "Sentinel-2B MSI (Multi-Spectral Instrument)",
+      "product": "Level-2A Bottom-Of-Atmosphere Surface Reflectance (TCI)",
+      "acquisition_date": "2023-03-07T08:10:00Z",
+      "canonical_bin": "Bin 1 (2023-03-01 to 2023-03-14)",
+      "season": "2023 Long Rains Season",
+      "processing_source": "Digital Earth Africa / Copernicus ESA",
+      "bands_used": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)"
+      ],
+      "crs_native": "EPSG:32636 (UTM Zone 36N)",
+      "crs_display": "EPSG:4326 (WGS84)",
+      "spatial_resolution": "10 m native optical ground sample distance",
+      "geographic_extent": {
+        "description": "Regional Pilot AOI (ug_pilot_moiben_01)",
+        "bbox_wgs84": [
+          35.15,
+          0.55,
+          35.35,
+          0.75
+        ],
+        "area_km2": 490.5,
+        "area_ha": 49050.0
+      },
+      "cloud_cover_percentage": 4.83,
+      "cloud_treatment": "Native Scene Classification Layer (SCL) filtered, cloud-free over pilot block",
+      "source_url": "s3://deafrica-sentinel-2/sentinel-s2-l2a-cogs/36/N/YF/2023/3/S2B_36NYF_20230307_0_L2A/TCI.tif",
+      "stac_endpoint": "https://explorer.digitalearth.africa/stac",
+      "analytical_role": "context_only",
+      "licensing": "Copernicus Open Access / CC-BY 4.0 / Digital Earth Africa Open Data"
+    },
+    {
+      "filename": "satellite_context_focal_2023.png",
+      "title": "Focal Landscape Context \u2014 503.10 ha Evaluation Grid",
+      "sensor": "Sentinel-2B MSI",
+      "product": "Level-2A Bottom-Of-Atmosphere Surface Reflectance (TCI)",
+      "acquisition_date": "2023-03-07T08:10:00Z",
+      "canonical_bin": "Bin 1 (2023-03-01 to 2023-03-14)",
+      "season": "2023 Long Rains Season",
+      "processing_source": "Digital Earth Africa / Copernicus ESA",
+      "bands_used": [
+        "Red (B04)",
+        "Green (B03)",
+        "Blue (B02)"
+      ],
+      "crs_native": "EPSG:32636 (UTM Zone 36N)",
+      "crs_display": "EPSG:4326 (WGS84)",
+      "spatial_resolution": "10 m native optical ground sample distance",
+      "geographic_extent": {
+        "description": "Evaluated Focal Agricultural Grid",
+        "bbox_wgs84": [
+          35.239622,
+          0.63988,
+          35.259832,
+          0.660105
+        ],
+        "area_ha": 503.1,
+        "dimensions_px": "86 rows \u00d7 65 cols at 30 m in EPSG:6933"
+      },
+      "cloud_cover_percentage": 0.0,
+      "cloud_treatment": "Cloud-free observation window",
+      "source_url": "s3://deafrica-sentinel-2/sentinel-s2-l2a-cogs/36/N/YF/2023/3/S2B_36NYF_20230307_0_L2A/TCI.tif",
+      "stac_endpoint": "https://explorer.digitalearth.africa/stac",
+      "analytical_role": "context_only",
+      "licensing": "Copernicus Open Access / CC-BY 4.0 / Digital Earth Africa Open Data"
+    },
+    {
+      "filename": "satellite_flag_to_triage_2023.png",
+      "title": "Multi-Modal Triage Workflow: Landscape Context \u2192 Anomaly Signal \u2192 Scouting Priority",
+      "sensor": "Sentinel-2B MSI + Analytical Diagnostic Engine",
+      "product": "Multi-Panel Visual (Authentic True-Colour + 30 m Z_NDVI + Vector GeoJSON Polygons)",
+      "acquisition_date": "2023-03-07T08:10:00Z (Imagery) / 2023-03-01 (Bin 1 Analytics)",
+      "canonical_bin": "Bin 1 (2023-03-01 to 2023-03-14)",
+      "season": "2023 Long Rains Season",
+      "processing_source": "Digital Earth Africa Sentinel-2 + M5 Screening Matrix + M6 Vectorizer",
+      "bands_used": [
+        "B04",
+        "B03",
+        "B02",
+        "B08",
+        "CHIRPS Precip",
+        "SMAP L4 SWI"
+      ],
+      "crs_native": "EPSG:6933 (Equal-Area 30 m) / EPSG:4326 (WGS84 Vector)",
+      "spatial_resolution": "10 m (Optical context) / 30 m (Screening grid)",
+      "geographic_extent": {
+        "description": "Evaluated Focal Agricultural Grid",
+        "bbox_wgs84": [
+          35.239622,
+          0.63988,
+          35.259832,
+          0.660105
+        ],
+        "area_ha": 503.1
+      },
+      "cloud_treatment": "SCL Masked (classes 3, 8, 9, 10, 11 excluded)",
+      "source_url": "https://explorer.digitalearth.africa/stac",
+      "analytical_role": "derived_from_existing_analysis_input",
+      "licensing": "CC-BY 4.0 / Open Access"
+    }
+  ]
+}
