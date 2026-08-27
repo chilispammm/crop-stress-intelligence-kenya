@@ -1,9 +1,10 @@
 # Multi-Modal Agricultural Early Warning & Crop Health Intelligence Pipeline
-![Alt text](export/figures/satellite_flag_to_triage_2023.png)
-
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
 [![Tests](https://img.shields.io/badge/tests-104%20passed-brightgreen.svg)]()
 [![Status](https://img.shields.io/badge/milestone-M6.0%20Frozen%20%26%20Validated-green.svg)]()
+
+![Alt text](export/figures/satellite_flag_to_triage_2023.png)
+
 
 An end-to-end Earth Observation (EO) screening and spatial triage framework designed to identify anomalous co-occurrences of precipitation, root-zone soil moisture dynamics, and high-resolution optical canopy greenness across agricultural landscapes in Kenya.
 
