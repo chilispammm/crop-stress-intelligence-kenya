@@ -106,10 +106,4 @@ crop-stress-intelligence-kenya/
 └── README.md                 # This overview guide
 ```
 
----
 
-
-### Run Full Production Pipeline
-```bash
-python scratch/generate_m6_production_artifacts.py
-```
