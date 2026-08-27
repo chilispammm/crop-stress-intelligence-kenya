@@ -1,5 +1,5 @@
 # Multi-Modal Agricultural Early Warning & Crop Health Intelligence Pipeline
-![Alt text](figures/satellite_flag_to_triage_2023.png)
+![Alt text](export/figures/satellite_flag_to_triage_2023.png)
 
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
 [![Tests](https://img.shields.io/badge/tests-104%20passed-brightgreen.svg)]()
