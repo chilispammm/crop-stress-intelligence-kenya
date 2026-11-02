@@ -74,13 +74,9 @@ def plot_temporal_diagnostic_profile(
     n_bins = len(dates)
     x_indices = np.arange(n_bins)
 
-    TITLE_Y = 0.985
-    SUBTITLE_Y = 0.945
-    PLOT_TOP = 0.91
-
     fig, axes = plt.subplots(4, 1, figsize=figsize, sharex=True)
-    fig.suptitle(title, fontsize=15, fontweight="bold", y=TITLE_Y)
-    fig.text(0.5, SUBTITLE_Y, subtitle, ha="center", fontsize=10.5, style="italic", color="#555555")
+    fig.suptitle(title, fontsize=14, fontweight="bold", y=0.985)
+    fig.text(0.5, 0.945, subtitle, ha="center", fontsize=11, style="italic", color="#444444")
 
     # Panel 1: CHIRPS Z_R
     ax1 = axes[0]
@@ -159,7 +155,7 @@ def plot_temporal_diagnostic_profile(
     )
     fig.text(0.5, 0.01, footer_text, ha="center", fontsize=8, style="italic", color="#555555")
 
-    plt.tight_layout(rect=[0, 0.04, 1, PLOT_TOP])
+    plt.tight_layout(rect=[0, 0.04, 1, 0.93])
 
     if output_path is not None:
         p = Path(output_path)
